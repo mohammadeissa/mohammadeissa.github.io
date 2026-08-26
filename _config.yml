@@ -1,0 +1,23 @@
+title: Mohammad Eissa
+description: >-
+  Engineering notes on agents, evaluation, and systems that have to be
+  auditable.
+author:
+  name: Mohammad Eissa
+url: "https://mohammadeissa.github.io"
+
+theme: minima
+show_excerpts: true
+
+header_pages:
+  - about.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
