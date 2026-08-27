@@ -11,8 +11,8 @@ A year ago I sat in a room at Boston Fintech Week and listened to a keynote
 speaker get asked what the focal point would be when everyone reconvened the
 following year. He said: AI agents.
 
-I remember writing it down in my notes. That was the entire extent of my response. I carelessly noted
-it and didn't think much of it, and now agents are what everyone is talking
+I remember carelessly writing it down in my notes. That was the entire extent of my
+response. I didn't think much of it, and now agents are what everyone is talking
 about and I'm late to the party; all because I heard something and mindlessly
 wrote it down with no action plan.
 
@@ -25,7 +25,7 @@ nothing, over about two months.
 
 ## I didn't know what a harness was
 
-That is the honest starting point. I had just heard of the word but what it actually meant?
+That is the honest starting point. I had heard the word, but what did it actually mean?
 I had no idea.
 
 I had heard of the LangGraph family without really knowing what it was. I knew
@@ -35,14 +35,14 @@ applied it to anything real.
 
 A harness, as I now finally understand, is everything around the model. The model is one
 component and arguably the least interesting one. The harness is what decides
-which tool gets called and what happens when that tool fails. It also determined what the agent is
+which tool gets called and what happens when that tool fails. It also determines what the agent is
 allowed to do without asking, where generated code is permitted to run, and what 
 happens when the model produces something confident and wrong.
 
 All of this was news to me because before this internship, I'd just look at benchmarks. This year alone,
 people went crazy when Gemini 3 came out and within a few days, OpenAI had clapped back with GPT-5.2. Then we
-saw Anthropic take the lead for months with reports of them not giving the average Joe the best models but they 
-quickly changed their mind when the Chinese open-source models like Kimi K3 and Qwen 3.8 (which can run locally emerged).
+saw Anthropic take the lead for months with reports of them not giving the average Joe the best models, but they
+quickly changed their mind when the Chinese open-source models like Kimi K3 and Qwen 3.8 (which can run locally) emerged.
 All of this does matter and I won't stop keeping up with these updates. But for someone like me, I'm
 not planning on creating my own LLM so I'll just use the best frontier model that's cost-efficient at the same
 time. Long story short, I was focused on the wrong part of the AI stack.
@@ -60,7 +60,6 @@ The thing is, a model is probabilistic. When it picks the wrong tool, every node
 downstream trusts that pick and builds on it, and what comes out the other end
 is a confident hallucination. Unlike runnable code where I can get an error message,
 I get absolute confidence and very unsafe behavior from the AI.
-
 
 The worst version of this in my system: someone says "send the email" and the
 router quietly selects "search emails." It looks like it worked. Nothing
@@ -105,8 +104,8 @@ phrasings I was testing it with, and then believed the result. It's the
 oldest mistake in machine learning and I walked directly into it while
 thinking I was being careful.
 
-The cascade router I replaced it with a local model first, a second model
-behind it, regex only as a tiebreak. This cascade router scored **89.9%** on the same sealed set.
+The cascade router I replaced it with used a local model first, a second model
+behind it, and regex only as a tiebreak. It scored **89.9%** on the same sealed set.
 More importantly it got read-versus-write right **100%** of the time, against
 19 dangerous misroutes from the regex.
 
@@ -131,12 +130,12 @@ model to help me build it.
 
 Am I validating my work with AI, or walking into a loop of bias I should
 be avoiding? Is this inherently wrong? I don't think so. But it does
-dial in on an important matter and it's that my judgement is more important than ever.
+dial in on an important matter and it's that my judgment is more important than ever.
 I can now build much more impressive things and much faster due to AI, but with that comes
-responsibility to make the right decision to scale a product/solution safely and efficently. 
-And yes, AI can help with that too but if you're blindly following it, you're the one at blame
+responsibility to make the right decision to scale a product/solution safely and efficiently. 
+And yes, AI can help with that too but if you're blindly following it, you're the one to blame
 in the end. And I think I've seen enough stories about companies in the consulting industry
-have multi-million dollar cases against them because of just that.
+having multi-million dollar cases brought against them because of just that.
 
 
 When I asked AI whether my routing approach was sound, I got agreement. Useful
@@ -145,7 +144,7 @@ tell the difference between "this is correct" and "this is plausible" from
 inside the conversation.
 
 In my project, I saw this when the sealed hold-out told me I was wrong. 51.1% is not 
-an opinion and it did not care how confident I was. My manager saying "regex is a bandaid"  was
+an opinion and it did not care how confident I was. My manager saying "regex is a bandaid" was
 outside the loop too and must be considered.
 
 That's the rule I've landed on. Use AI to build, absolutely. But every claim
@@ -161,8 +160,8 @@ me how far I am from going from a novice to a master. I now know what a harness
 is, which mostly means I know how much of it I haven't built yet. 
 
 And as a final note, the biggest lesson: AI is only as good as you are. Coding agents
-are insanely good not but after trying to build my own harness and seeing how stupid the LLM
-can be was a wake up call that if you just depend on the model's intelligece and whatever frontier
+are insanely good now, but after trying to build my own harness and seeing how stupid the LLM
+can be was a wake-up call that if you just depend on the model's intelligence and whatever frontier
 model is going to be released next Tuesday, you're just falling behind.
 
 ---
